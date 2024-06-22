@@ -1,0 +1,490 @@
+@font-face {
+	font-family: poppins;
+	src: url(fonts/Poppins_Regular.woff2);
+}
+@font-face {
+	font-family: SFProDisplay;
+	src: url(fonts/SFProDisplay_Regular.woff2);
+}
+@font-face {
+	font-family: roboto;
+	src: url(fonts/Roboto_Regular.woff2);
+}
+body {
+    height: 100vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.resume {
+    max-width: 800px;
+    margin: 25px auto;
+    display: flex;
+    flex-direction: row;
+    box-shadow: -50px 40px 50px 0px rgb(128, 128, 128);
+}
+.resume__left {
+    flex: 0 1 40%;
+    background: rgb(78, 78, 78);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 3px 6px 1px rgb(128, 128, 128);
+    z-index: 1;
+}
+.resume__right {
+    flex: 0 1 60%;
+    background: rgb(236, 236, 236);
+    display: flex;
+    flex-direction: column;
+    padding: 0px 40px;
+}
+
+
+/* left side */
+
+/* photo */
+.resume__photo {
+    width: 200px;
+    margin: 50px auto;
+    padding: 10px;
+    background: rgb(255, 255, 255);
+}
+.resume__photo img {
+    max-width: 100%;
+}
+
+
+/* ------------------ */
+.bac-elem::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 290px;
+    height: 35px;
+    background: rgb(236, 2, 2);
+    font-size: 27px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: rgb(255, 255, 255);
+    font-family: roboto;
+    padding: 5px 0px 5px 15px;
+    border-radius: 3px;
+    z-index: 3;
+}
+.bac-elem::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    right: -56px;
+    border-left: 2px solid transparent;
+	border-right: 26px solid transparent;
+	border-top: 20px solid rgb(145, 1, 1);
+    border-radius: 3px;
+    z-index: 2;
+}
+/* -------------------- */
+
+/* contact */
+.resume__contact {
+    padding: 0px 30px;
+}
+.elem-cont::before {
+    content: "CONTACT";
+}
+.contact__phone,
+.contact__email {
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    font-family: poppins;
+}
+.resume__contact i {
+    font-size: 18px;
+    width: 30px;
+    padding: 3px;
+    margin: 2px 10px;
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(223, 223, 223);
+}
+.resume__contact a {
+    text-decoration: none;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    font-family: poppins;
+}
+.contact__title {
+    position: relative;
+    height: 60px;
+}
+
+/* language */
+.elem-lang::before {
+    content: "LANGUAGE";
+}
+.resume__language {
+    padding: 0px 30px;
+    margin: 30px 0px 0px 0px;
+}
+.language__title {
+    position: relative;
+    height: 60px;
+}
+.language__item {
+    font-size: 18px;
+    font-family: poppins;
+    width: 30px;
+    margin: 0px 10px;
+    color: rgb(255, 255, 255);
+    position: relative;
+}
+.language__item span {
+    position: absolute;
+    top: 8px;
+    left: 120px;
+    width: 150px;
+    height: 10px;
+    border: 2px solid #fff;
+}
+.progress__english::before,
+.progress__ukrainian::before,
+.progress__russian::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 8px;
+    background: #fff;
+}
+.progress__english::before {
+    width: 60px;
+}
+.progress__ukrainian::before {
+    width: 140px;
+}
+.progress__russian::before {
+    width: 130px;
+}
+
+/* skill */
+.elem-skill::before {
+    content: 'SKILLS';
+}
+.resume__skills {
+    padding: 0px 30px;
+    margin: 30px 0px 0px 0px;
+}
+.skills__title {
+    position: relative;
+    height: 60px;
+}
+.skills__item {
+    font-size: 18px;
+    font-family: poppins;
+    width: 30px;
+    margin: 0px 10px;
+    color: rgb(255, 255, 255);
+    position: relative;
+}
+.skills__item span {
+    position: absolute;
+    top: 8px;
+    left: 120px;
+    width: 150px;
+    height: 10px;
+    border: 2px solid rgb(255, 255, 255);
+}
+.progress__html::before,
+.progress__css::before,
+.progress__js::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 8px;
+    background: rgb(255, 255, 255);
+}
+.progress__html::before {
+    width: 140px;
+}
+.progress__css::before {
+    width: 130px;
+}
+.progress__js::before {
+    width: 100px;
+}
+
+/* right side */
+
+/* name */
+.resume__name {
+    padding: 80px 0px;
+}
+.name__name {
+    font-family: roboto;
+    font-size: 50px;
+    line-height: 50px;
+    color: rgb(134, 134, 134);
+}
+.name__surname {
+    font-family: roboto;
+    font-size: 50px;
+    line-height: 50px;
+}
+.name__profession {
+    font-family: poppins;
+    font-size: 18px;
+    color: rgb(167, 161, 161);
+    margin: 10px 0px 0px 0px;
+}
+
+
+/* education */
+.resume__education {
+    padding: 10px 0px;
+}
+.education__title {
+    font-family: roboto;
+    font-size: 25px;
+    font-weight: 600;
+}
+.education__title i {
+    font-size: 20px;
+    border: 3px solid rgb(0, 0, 0);
+    padding: 5px;
+    position: relative;
+}
+.education__title i::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    width: 370px;
+    height: 3px;
+    background: rgb(0, 0, 0);
+}
+.education__item {
+    margin: 20px 0px 0px 0px;
+}
+.education__item-title {
+    display: flex;
+    justify-content: space-between;
+    font-family: poppins;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(236, 2, 2);
+    margin: 5px 0px 0px 0px;
+}
+.education__item-title span {
+    color: rgb(0, 0, 0);
+}
+.education__item-place {
+    font-family: poppins;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0px 0px 5px 0px;
+}
+.education__item-text {
+    font-family: poppins;
+    font-size: 12px;
+    line-height: 12px;
+}
+.education__item-text a {
+    text-decoration: none;
+    color: rgb(236, 2, 2);
+}
+
+/* experience */
+.resume__experience {
+    margin: 20px 0px 0px 0px;
+}
+.experience__title {
+    font-family: roboto;
+    font-size: 25px;
+    font-weight: 600;
+}
+.experience__title i {
+    font-size: 20px;
+    border: 3px solid rgb(0, 0, 0);
+    padding: 5px 7px;
+    position: relative;
+}
+.experience__title i::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    width: 370px;
+    height: 3px;
+    background: rgb(0, 0, 0);
+}
+.experience__text {
+    margin: 10px 0px 0px 0px;
+    font-family: poppins;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+/* about */
+.resume__about {
+    margin: 20px 0px 20px 0px;
+}
+.about__title {
+    font-family: roboto;
+    font-size: 25px;
+    font-weight: 600;
+}
+.about__title i {
+    font-size: 20px;
+    border: 3px solid rgb(0, 0, 0);
+    padding: 5px 7px;
+    position: relative;
+}
+.about__title i::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    width: 370px;
+    height: 3px;
+    background: rgb(0, 0, 0);
+}
+.about__text {
+    margin: 10px 0px 0px 0px;
+    font-family: poppins;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+/* modal */
+.modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(56, 56, 56, 0.5);
+    cursor: pointer;
+    overflow-y: auto;
+    display: none;
+    z-index: 4;
+}
+.modal__main {
+    position: relative;
+    max-width: 500px;
+    background-color: rgb(236, 236, 236);
+    margin: auto;
+    color: rgb(0, 0, 0);
+    border-radius: 16px;
+    padding: 10px;
+    cursor: default;
+    display: none;
+    overflow: auto;
+    z-index: 4;
+}
+.modal__container img {
+    max-width: 100%;
+}
+.modal__close {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(236, 2, 2);
+    box-shadow: 0px 0px 10px #fff;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: bold;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    outline: 1px solid transparent;
+    padding: 3px;
+    transition: outline-color 0.15s ease-in-out;
+    border-radius: 15px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    z-index: 5;
+}
+.modal__close:focus-visible {
+    outline-color: rgb(0, 128, 0);
+}
+
+/* media */
+@media (max-width: 767px) {
+    .wrapper {
+        padding: 10px 20px 10px 10px;
+    }
+    .resume {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .resume__right {
+        padding: 15px 40px;
+    }
+    .resume__name {
+        padding: 0px 10px 30px 10px;
+    }
+    .name__name {
+        font-size: 30px;
+        line-height: 30px;
+        color: rgb(255, 255, 255);
+    }
+    .name__surname {
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .resume__contact,
+    .resume__language,
+    .resume__skills {
+        padding: 0px 0px;
+    }
+    .name__name {
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .name__surname {
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .education__title i::after {
+        width: 150px;
+    }
+    .about__title i::after {
+        width: 150px;
+    }
+    .experience__title i::after {
+        width: 150px;
+    }
+    .bac-elem::after {
+        display: none;
+    }
+    .bac-elem::before {
+        width: 290px;
+    }
+}
+@media (max-width: 345px) {
+    .bac-elem::before {
+        width: 250px;
+    }
+    .skills__item span {
+        width: 130px;
+    }
+    .progress__html::before {
+        width: 120px;
+    }
+    .progress__css::before {
+        width: 110px;
+    }
+    .progress__js::before {
+        width: 95px;
+    }
+    .language__item span {
+        width: 130px;
+    }
+    .progress__english::before {
+        width: 50px;
+    }
+    .progress__ukrainian::before {
+        width: 120px;
+    }
+    .progress__russian::before {
+        width: 110px;
+    }
+}
